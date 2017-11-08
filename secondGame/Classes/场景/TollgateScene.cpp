@@ -44,6 +44,7 @@ void TollgateScene::addPlayer(TMXTiledMap *map){
     Player *mPlayer = Player::create();
     mPlayer->bindSprite(sprite);
     mPlayer->run();
+    mPlayer->setTileMap(map);
     
     mPlayer->setPosition(Point(playerX,playerY));
     

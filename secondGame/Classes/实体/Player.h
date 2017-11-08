@@ -15,6 +15,11 @@ public:
     CREATE_FUNC(Player);
     virtual bool init();
     void run();
+    void setViewPointByPlayer();
+    void setTileMap(TMXTiledMap *map);
+    virtual void setTagPosition(int x, int y);
+private:
+    TMXTiledMap *m_map;
 };
 
 
