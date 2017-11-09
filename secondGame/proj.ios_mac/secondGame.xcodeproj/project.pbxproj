@@ -65,9 +65,11 @@
 		6DB38A881FB18AB000B86D39 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38A871FB18AAF00B86D39 /* player.png */; };
 		6DB38A8B1FB19EFE00B86D39 /* boys.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38A891FB19EFE00B86D39 /* boys.png */; };
 		6DB38A8C1FB19EFE00B86D39 /* boys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38A8A1FB19EFE00B86D39 /* boys.plist */; };
-		6DB38A8E1FB19F2C00B86D39 /* level01.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38A8D1FB19F2C00B86D39 /* level01.tmx */; };
 		6DB38A931FB2A03E00B86D39 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB38A921FB2A03E00B86D39 /* Controller.cpp */; };
 		6DB38A991FB2A42B00B86D39 /* SimpleMoveController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB38A981FB2A42B00B86D39 /* SimpleMoveController.cpp */; };
+		6DB38A9E1FB3004600B86D39 /* ThreeDirectionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB38A9D1FB3004600B86D39 /* ThreeDirectionController.cpp */; };
+		6DB38AA51FB3FB9100B86D39 /* meta_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38AA31FB3FB9100B86D39 /* meta_tiles.png */; };
+		6DB38AA61FB3FB9100B86D39 /* level01.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38AA41FB3FB9100B86D39 /* level01.tmx */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -178,12 +180,15 @@
 		6DB38A871FB18AAF00B86D39 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		6DB38A891FB19EFE00B86D39 /* boys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boys.png; sourceTree = "<group>"; };
 		6DB38A8A1FB19EFE00B86D39 /* boys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = boys.plist; sourceTree = "<group>"; };
-		6DB38A8D1FB19F2C00B86D39 /* level01.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level01.tmx; sourceTree = "<group>"; };
 		6DB38A901FB2A03300B86D39 /* Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		6DB38A921FB2A03E00B86D39 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		6DB38A961FB2A16E00B86D39 /* ControllerListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerListener.h; sourceTree = "<group>"; };
 		6DB38A971FB2A41A00B86D39 /* SimpleMoveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleMoveController.h; sourceTree = "<group>"; };
 		6DB38A981FB2A42B00B86D39 /* SimpleMoveController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMoveController.cpp; sourceTree = "<group>"; };
+		6DB38A9D1FB3004600B86D39 /* ThreeDirectionController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ThreeDirectionController.cpp; sourceTree = "<group>"; };
+		6DB38AA01FB3005100B86D39 /* ThreeDirectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeDirectionController.h; sourceTree = "<group>"; };
+		6DB38AA31FB3FB9100B86D39 /* meta_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_tiles.png; sourceTree = "<group>"; };
+		6DB38AA41FB3FB9100B86D39 /* level01.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level01.tmx; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -318,7 +323,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6DB38A8D1FB19F2C00B86D39 /* level01.tmx */,
+				6DB38AA41FB3FB9100B86D39 /* level01.tmx */,
+				6DB38AA31FB3FB9100B86D39 /* meta_tiles.png */,
 				6DB38A8A1FB19EFE00B86D39 /* boys.plist */,
 				6DB38A891FB19EFE00B86D39 /* boys.png */,
 				6DB38A871FB18AAF00B86D39 /* player.png */,
@@ -401,6 +407,8 @@
 				6DB38A961FB2A16E00B86D39 /* ControllerListener.h */,
 				6DB38A971FB2A41A00B86D39 /* SimpleMoveController.h */,
 				6DB38A981FB2A42B00B86D39 /* SimpleMoveController.cpp */,
+				6DB38AA01FB3005100B86D39 /* ThreeDirectionController.h */,
+				6DB38A9D1FB3004600B86D39 /* ThreeDirectionController.cpp */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -527,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB38AA61FB3FB9100B86D39 /* level01.tmx in Resources */,
 				6DB38A751FB157AA00B86D39 /* map.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				6DB38A8B1FB19EFE00B86D39 /* boys.png in Resources */,
@@ -539,6 +548,7 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				6DB38AA51FB3FB9100B86D39 /* meta_tiles.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				6DB38A8C1FB19EFE00B86D39 /* boys.plist in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
@@ -550,7 +560,6 @@
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
-				6DB38A8E1FB19F2C00B86D39 /* level01.tmx in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
@@ -582,6 +591,7 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				6DB38A851FB1891F00B86D39 /* Player.cpp in Sources */,
 				6DB38A831FB1657C00B86D39 /* Entity.cpp in Sources */,
+				6DB38A9E1FB3004600B86D39 /* ThreeDirectionController.cpp in Sources */,
 				6DB38A931FB2A03E00B86D39 /* Controller.cpp in Sources */,
 				6DB38A801FB158FD00B86D39 /* TollgateScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,

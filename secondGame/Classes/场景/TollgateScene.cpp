@@ -7,7 +7,8 @@
 
 #include "TollgateScene.h"
 #include "Player.h"
-#include "SimpleMoveController.h"
+//#include "SimpleMoveController.h"
+#include "ThreeDirectionController.h"
 
 Scene* TollgateScene::createScene(){
     auto scene = Scene::create();
@@ -50,11 +51,20 @@ void TollgateScene::addPlayer(TMXTiledMap *map){
     
     map->addChild(mPlayer);
     
-    SimpleMoveController *smController = SimpleMoveController::create();
+//    SimpleMoveController *smController = SimpleMoveController::create();
     //设置移动速度
-    smController->setiSpeed(1);
+//    smController->setiSpeed(1);
     
-    this->addChild(smController);
+//    this->addChild(smController);
     
-    mPlayer->setController(smController);
+//    mPlayer->setController(smController);
+    
+    
+    ThreeDirectionController *thController = ThreeDirectionController::create();
+    thController->setiXSpeed(1);
+    thController->setiYSpeed(0);
+    
+    this->addChild(thController);
+    
+    mPlayer->setController(thController);
 }
