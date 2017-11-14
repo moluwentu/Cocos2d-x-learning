@@ -8,6 +8,8 @@
 #include "Player.h"
 
 bool Player::init(){
+    isJumping = false;
+    
     return true;
 }
 
@@ -75,11 +77,69 @@ void Player::setViewPointByPlayer(){
 
 void Player::setTileMap(TMXTiledMap *map){
     this->m_map = map;
+    
+    //保存meta的图层引用
+    this->meta = m_map->getLayer("meta");
+    this->meta->setVisible(false);
 }
 
 void Player::setTagPosition(int x, int y){
+    //判断前方是否可以移动
+    //取主角前方的坐标
+    Size spriteSize = m_sprite->getContentSize();
+    Point dstPos = Point(x + spriteSize.width / 2, y);
+    
+    //获取主角前方坐标在地图中格子的位置
+    Point tiledPos = tileCoordForPosition(Point(dstPos.x,dstPos.y));
+    
+    //获取地图格子的唯一标识
+    int tiledGid = meta->getTileGIDAt(tiledPos);
+    
+    if (tiledGid != 0) {
+        Value properties = m_map->getPropertiesForGID(tiledGid);
+        
+        ValueMap propertiesMap = properties.asValueMap();
+        
+        //获得格子的属性
+        Value prop = propertiesMap.at("food");
+        
+        //判断Collidable是否为true,是就不让玩家移动
+        if (!prop.asString().compare("true") && isJumping == false) {
+            isJumping = true;
+            
+            auto jumpBy = JumpBy::create(0.5f, Point(-100,0), 80, 1);
+            CallFunc *callfunc = CallFunc::create([&](){
+               //回复状态
+                isJumping = false;
+            });
+            
+            auto actions = Sequence::create(jumpBy, callfunc, NULL);
+            this->runAction(actions);
+        }
+    }
+    
     Entity::setTagPosition(x, y);
     
     //以主角为中心移动地图
     setViewPointByPlayer();
+}
+
+Point Player::tileCoordForPosition(Point pos){
+    Size mapTiledNum = m_map->getMapSize();
+    Size tileSize = m_map->getTileSize();
+    
+    int x = pos.x / tileSize.width;
+    
+    int y = (700 - pos.y) / tileSize.height;
+    
+    //格子坐标从零开始计算
+    if(x > 0){
+        x -= 1;
+    }
+    
+    if (y > 0) {
+        y -= 1;
+    }
+    
+    return Point(x,y);
 }

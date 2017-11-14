@@ -69,7 +69,7 @@
 		6DB38A991FB2A42B00B86D39 /* SimpleMoveController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB38A981FB2A42B00B86D39 /* SimpleMoveController.cpp */; };
 		6DB38A9E1FB3004600B86D39 /* ThreeDirectionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DB38A9D1FB3004600B86D39 /* ThreeDirectionController.cpp */; };
 		6DB38AA51FB3FB9100B86D39 /* meta_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38AA31FB3FB9100B86D39 /* meta_tiles.png */; };
-		6DB38AA61FB3FB9100B86D39 /* level01.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 6DB38AA41FB3FB9100B86D39 /* level01.tmx */; };
+		6DB4AEF71FBAC02600BB0125 /* level01.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 6DB4AEF61FBAC02600BB0125 /* level01.tmx */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -188,7 +188,7 @@
 		6DB38A9D1FB3004600B86D39 /* ThreeDirectionController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ThreeDirectionController.cpp; sourceTree = "<group>"; };
 		6DB38AA01FB3005100B86D39 /* ThreeDirectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeDirectionController.h; sourceTree = "<group>"; };
 		6DB38AA31FB3FB9100B86D39 /* meta_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_tiles.png; sourceTree = "<group>"; };
-		6DB38AA41FB3FB9100B86D39 /* level01.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level01.tmx; sourceTree = "<group>"; };
+		6DB4AEF61FBAC02600BB0125 /* level01.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level01.tmx; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -323,7 +323,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6DB38AA41FB3FB9100B86D39 /* level01.tmx */,
+				6DB4AEF61FBAC02600BB0125 /* level01.tmx */,
 				6DB38AA31FB3FB9100B86D39 /* meta_tiles.png */,
 				6DB38A8A1FB19EFE00B86D39 /* boys.plist */,
 				6DB38A891FB19EFE00B86D39 /* boys.png */,
@@ -535,7 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB38AA61FB3FB9100B86D39 /* level01.tmx in Resources */,
+				6DB4AEF71FBAC02600BB0125 /* level01.tmx in Resources */,
 				6DB38A751FB157AA00B86D39 /* map.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				6DB38A8B1FB19EFE00B86D39 /* boys.png in Resources */,
